@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>single page</title>
+    <link rel="stylesheet" href="css/reboot.css">
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="content">
+        <header class="header">
+            <div class="container head_flex">
+                <div class="head_left">
+                    <a href="index.html" class="logo">
+                        <div class="brand">
+                            bran<span class="brand-d">d</span>
+                        </div>
+                    </a>
+                    <form class="header_middle">
+                        <div class="browse_menu_hidden">
+                            <div class="header_browse">
+                                Browse
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <div class="browse_menu">
+                                    <div class="transform"></div>
+                                    <p>women</p>
+                                    <div><a href="#">Dresses</a> <a href="#">Tops</a>
+                                        <a href="#">Sweaters/Knits</a>
+                                        <a href="#">Jackets/Coats</a> <a href="#">Blazers</a>
+                                        <a href="#">Denim</a>
+                                        <a href="#">Leggings/Pants</a>
+                                        <a href="#">Skirts/Shorts</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                    <p>men</p>
+                                    <div>
+                                        <a href="#">Tees/Tank tops</a>
+                                        <a href="#">Shirts/Polos</a>
+                                        <a href="#">Sweaters</a>
+                                        <a href="#">Sweatshirts/Hoodies</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Jackets/vests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="search" id="search" class="header_search" placeholder="Search for Item...">
+                        <div class="header_search_submit" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="head_right">
+                    <div id="basket"></div>
+                    <div id="autentification">
+                        <div class="my-Account"> My Account
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div id="autorize">
+                            <form class="authorization" method="post" action="/">
+                                <label for="login">Email adress: </label><input type="text" name="login"
+                                                                                id="login"/><br>
+                                <label for="password">Password: </label><input type="password" name="pass"
+                                                                               id="pass"/> <br>
+                                <div style="display: flex"><label for="rememberme">Remember me: </label>
+                                    <input type="checkbox" name="rememberme" id="rememberme"/></div>
+                                <br>
+                                <input class="button-enter" type="button" name="Submgin" value="LOG IN"
+                                       onclick="register()"/>
+                                <br>
+                                <!-- <a href="/register/">Register</a> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="container top_menu" id="top_menu">
+            <!-- загружено js -->
+        </nav>
+        <header class="header_arrivals">
+            <div class="container arrivals">
+                <h2>new arrivals</h2>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">men</a></li>
+                    <li><a class="header_menu_active" href="#">new arrivals</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="slider_single">
+            <nav>
+                <a href="#" class="left_nav">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="right_nav">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </div>
+        <div class="container">
+            <section class="women_collection">
+                <div class="collection_content" id="item20_page">
+                    <h3>women collection</h3>
+                    <div class="style_border">
+                        <div class="style_border_red"></div>
+                    </div>
+                    <h4>moschino cheap and chic</h4>
+                    <div class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="collect_p">Compellingly actualize fully researched processes before proactive outsourcing.
+                        Progressively syndicate collaborative architectures before cutting-edge services.
+                        Completely visualize parallel core competencies rather than exceptional portals.
+                    </p>
+                    <div class="collect_info">
+                        <p>material: <span>cotton</span></p>
+                        <p>designer: <span>binburhan</span></p>
+                    </div>
+                    <p class="price">$561</p>
+                    <div class="collect_border"></div>
+                    <form class="choose_to_cart">
+                        <div class="form form-1">
+                            <div class="choose_color">choose color</div>
+                            <div class="option">
+                                <div class="option_click">
+                                    <div class="color_option"></div>
+                                    <p>red</p>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <div class="option_hidden" id="choose-color">
+                                    <div class="option">
+                                        <div class="color_option"></div>
+                                        <p>red</p>
+                                    </div>
+                                    <div class="option">
+                                        <div class="color_option blue"></div>
+                                        <p>blue</p>
+                                    </div>
+                                    <div class="option">
+                                        <div class="color_option yellow"></div>
+                                        <p>yellow</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form form-2">
+                            <div class="choose_color">CHOOSE SIZE</div>
+                            <div class="option option2">
+                                <div class="option_click">
+                                    <p>XXS</p>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <div class="option_hidden" id="choose-size">
+                                    <div class="option">XXS</div>
+                                    <div class="option">XS</div>
+                                    <div class="option">S</div>
+                                    <div class="option">M</div>
+                                    <div class="option">L</div>
+                                    <div class="option">XL</div>
+                                    <div class="option">XXL</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form form-3">
+                            <div class="choose_color">quantity</div>
+                            <input class="option option3" type="number" name="quantity" value="1" min="1" max="20"
+                                   step="1">
+                        </div>
+                        <div class="form form-4">
+                            <button class="cart-button">Add to Cart
+                                <i class="sprite sprite-forma-1-copy"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="woman_goods">
+                <h2 class="women_text_1">you may like also </h2>
+                <div class="women_parent" id="featured_parent">
+                    <a href="#" class="fetured_item" value="1" id="item_9">
+                        <div class="item_back">
+                            <img class="img1 item_img" src="img/single_page/layer-44.png" alt="layer44.png">
+                        </div>
+                        <div class="fetured_text">blaze leggings</div>
+                        <div class="fetured_cont">
+                            <div class="fetured_price">$52.00</div>
+                            <div class="stars stars_fetured">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="blockhover" onclick="return false">
+                            <div class="imgfix">
+                                <i class="sprite sprite-forma-1"></i>
+                                <p class="block">Add to Card</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="fetured_item" value="1" id="item_10">
+                        <div class="item_back">
+                            <img class="img2 item_img" src="img/single_page/layer-45.png" alt="layer45.png">
+                        </div>
+                        <div class="fetured_text">alexa sweater</div>
+                        <div class="fetured_cont">
+                            <div class="fetured_price">$52.00</div>
+                            <div class="stars stars_fetured">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="blockhover" onclick="return false">
+                            <div class="imgfix">
+                                <i class="sprite sprite-forma-1"></i>
+                                <p class="block">Add to Card</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="fetured_item" value="1" id="item_11">
+                        <div class="item_back">
+                            <img class="img3 item_img" src="img/single_page/layer-46.png" alt="layer46.png">
+                        </div>
+                        <div class="fetured_text">agnes top</div>
+                        <div class="fetured_cont">
+                            <div class="fetured_price">$52.00</div>
+                            <div class="stars stars_fetured">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="blockhover" onclick="return false">
+                            <div class="imgfix">
+                                <i class="sprite sprite-forma-1"></i>
+                                <p class="block">Add to Card</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="fetured_item" value="1" id="item_12">
+                        <div class="item_back">
+                            <img class="item_img" src="img/single_page/layer-47.png" alt="layer47.png">
+                        </div>
+                        <div class="fetured_text">sylva sweater</div>
+                        <div class="fetured_cont">
+                            <div class="fetured_price">$52.00</div>
+                            <div class="stars stars_fetured">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="blockhover" onclick="return false">
+                            <div class="imgfix">
+                                <i class="sprite sprite-forma-1"></i>
+                                <p class="block">Add to Card</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="subscribe">
+            <div class="back_opacity">
+                <div class="sub container">
+                    <article class="sub_left">
+
+                        <div class="click_bar">
+                            <div class="click"></div>
+                            <div class="click act"></div>
+                            <div class="click"></div>
+                        </div>
+                    </article>
+                    <div class="sub_right">
+                        <div class="sub_right_h">Subscribe</div>
+                        <div class="sub_right_p"> FOR OUR NEWLETTER AND PROMOTION</div>
+                        <form class="sub_right_form">
+                            <input class="email-subscribe" id="email_subscribe" placeholder="Enter Your Email" required
+                                   pattern="\S+@[a-z]+.[a-z]+">
+                            <button class="email-subscribe-submit" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="company_information">
+                <article class="left_menu">
+                    <a href="index.html" class="logo">
+                        <h3 class="brand"> bran<span class="brand-d">d</span></h3>
+                    </a>
+                    <p class="left_menu_text"> Objectively transition extensive data rather than cross functional
+                        solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits.
+                        Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                        <br>
+                        <br> Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
+                        superior initiatives for wireless technologies. Dynamically optimize. </p>
+                </article>
+                <nav class="right_menu">
+                    <ul>
+                        <li>company</li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">how it works</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <ul>
+                        <li>information</li>
+                        <li><a href="#">tearms &amp; condition</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">how to buy</a></li>
+                        <li><a href="#">how to sell</a></li>
+                        <li><a href="#">promotion</a></li>
+                    </ul>
+                    <ul>
+                        <li>shop category</li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">child</a></li>
+                        <li><a href="#">apparel</a></li>
+                        <li><a href="#">browse all</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div class="copyrights">&copy; 2017 Brand All Rights Reserved.</div>
+            <ul class="footer_icons">
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+                <li><i class="fa fa-pinterest-square" aria-hidden="true"></i></li>
+                <li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script>
+    $(document).ready(function () {
+        // basket
+        var basket = new Basket();
+        basket.render('#basket');
+
+
+        $(document).on('click', '.cart', function () {
+            $('.cart-hide').slideToggle('slow');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#basket").length) {
+                $('.cart-hide').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+
+        $(document).on('click', '.header_browse', function () {
+            $('.browse_menu').slideToggle('slow');
+        });
+
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest(".browse_menu_hidden").length) {
+                $('.browse_menu').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+        $('.load').on('click', '.fa', function () {
+            var eventId = $(this).parents('.cart-hide_item')[0].id;
+            basket.delete(eventId);
+        });
+
+
+        $('#featured_parent').on('click', '.fetured_item', function (e) {
+            this.idProduct = $(this).attr('id').split('_')[1];
+            this.src = $(this).find('.item_img').attr('src');
+            this.alt = $(this).find('.item_img').attr('alt');
+            this.quantity = $(this).attr('value');
+            this.price = $(this).find('.fetured_price').text().replace('$', '');
+            this.name = $(this).find('.fetured_text').text();
+            this.rating = $(this).find('.stars_fetured').html();
+            basket.add(this.idProduct, this.src, this.alt, this.quantity, this.price, this.name, this.rating);
+        });
+
+
+        //menu get & render
+        $.ajax({
+            method: "GET",
+            url: './ajax/menu.json',
+            dataType: "json",
+            success: function (data) {
+                var menuitems = [];
+                for (var i = 0; i < data.length; i++) {
+                    menuitems.push(new MenuItem(data[i].href, data[i].name, data[i].submenu));
+                }
+                document.getElementById('top_menu').innerHTML = (new Menu('my_menu', 'menu', menuitems).render());
+            }
+        });
+
+        // forms
+        var regExpMail = /^\w+\.?-?\w+@\w+\.\w+$/g;
+        $('.email-subscribe-submit').on('click', function () {
+            var emailInput = $('#email_subscribe');
+            checkForm(emailInput, regExpMail);
+            return false;
+        });
+
+
+        // citaty
+        $('.click_bar').on('click', '.click', function () {
+            $(this).siblings().removeClass('act');
+            $(this).addClass('act');
+            var act = $(this).index();
+            $('.citaty').remove();
+            $.ajax({
+                method: "GET",
+                url: './ajax/citatys.json',
+                dataType: "json",
+                success: function (data) {
+                    new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                        data.citatys[act].signature).render('.sub_left');
+                }
+            });
+        });
+
+        var act = $('.act').index();
+        $.ajax({
+            method: "GET",
+            url: './ajax/citatys.json',
+            dataType: "json",
+            success: function (data) {
+                new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                    data.citatys[act].signature).render('.sub_left');
+            }
+        });
+
+        // page add-to-cart
+
+        $('.women_collection').on('click', '.cart-button', function () {
+            var idProduct = $(this).parents('.collection_content').attr('id').split('_')[0].replace('item', '');
+            var src = $('.slider_single').css('background-image').replace('url("', '').replace('")', '');
+            var alt = $(this).parents('.collection_content').attr('id').split('_')[0];
+            var quantity = parseInt($(this).parents('.choose_to_cart').find('.option3').val());
+            var price = parseInt($(this).parents('.collection_content').find('.price').text().replace('$', ''));
+            var name = $(this).parents('.collection_content').find('h4').text();
+            var rating = $(this).parents('.collection_content').find('.rating').html();
+            basket.add(idProduct, src, alt, quantity, price, name, rating);
+            return false;
+        });
+
+        $('.form-1').on('click', '.option', function () {
+            $(this).find('.option_hidden').slideToggle('slow');
+            $(this).find('.fa').toggleClass('angle-switch180');
+        });
+
+        $('#choose-color').on('click', '.option', function () {
+            $(this).parents('.option').css('width', '146px');
+            var valColor = $(this).find('p').text();
+            var bgColor = $(this).find('.color_option').css('background-color');
+            $(this).parents('.option_hidden').siblings('.option_click').find('.color_option').css('background-color', '' + bgColor);
+            $(this).parents('.option_hidden').siblings('.option_click').find('p').text(valColor);
+        });
+
+        $('.form-2').on('click', '.option', function () {
+            $(this).find('.option_hidden').slideToggle('slow');
+            $(this).find('.fa').toggleClass('angle-switch180');
+        });
+
+        $('#choose-size').on('click', '.option', function () {
+            $(this).parents('.option').css('width', '146px');
+            var valSize = $(this).text();
+            console.log(valSize);
+            $(this).parents('.option_hidden').siblings('.option_click').find('p').text(valSize);
+        });
+
+        // authorization
+        $('.authorization').hide();
+        $(document).on('click', '.my-Account', function () {
+            $('.authorization').slideToggle('slow');
+            $(this).find('.fa').toggleClass('rotate180deg');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#autentification").length) {
+                $('.authorization').slideUp('slow');
+                $('.my-Account').find('.fa').removeClass('rotate180deg');
+            }
+            e.stopPropagation();
+        });
+
+    });
+</script>
+</body>
+</html>

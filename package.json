@@ -1,0 +1,22 @@
+{
+  "name": "nikita_sysoev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.23.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "jquery-ui": "^1.12.1"
+  },
+  "dependencies": {}
+}

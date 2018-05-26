@@ -1,0 +1,23 @@
+{
+  "result": 1,
+  "basket": [
+    {
+      "id_product": "3",
+      "src": "img/index/featured_items/layer-4.png",
+      "alt":"layer-4.png",
+      "quantity": 1,
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "4.0"
+    },
+    {
+      "id_product": "4",
+      "src": "img/index/featured_items/layer-5.png",
+      "alt":"layer-5.png",
+      "quantity": 1,
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "4.5"
+    }
+  ]
+}

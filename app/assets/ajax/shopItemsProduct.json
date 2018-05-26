@@ -1,0 +1,187 @@
+{
+  "result": 1,
+  "shopItems": [
+    {
+      "id": "item_1",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-1.png",
+      "alt":"layer-1.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_2",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-3.png",
+      "alt":"layer-3.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_3",
+      "value": "1",
+      "href": "#",
+      "src": "img/index/featured_items/layer-4.png",
+      "alt":"layer-4.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_4",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-5.png",
+      "alt":"layer-5.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_5",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-6.png",
+      "alt":"layer-6.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_6",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-7.png",
+      "alt":"layer-7.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+
+
+    {
+      "id": "item_7",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-8.png",
+      "alt":"layer-8.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_8",
+      "value": "1",
+      "href": "single_page.html",
+      "src": "img/index/featured_items/layer-9.png",
+      "alt":"layer-9.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_9",
+      "value": "1",
+      "href": "#",
+      "src": "img/single_page/layer-44.png",
+      "alt":"layer44.png",
+      "price": 52,
+      "name": "blaze leggings",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_10",
+      "value": "1",
+      "href": "#",
+      "src": "img/single_page/layer-45.png",
+      "alt":"layer45.png",
+      "price": 52,
+      "name": "alexa sweater",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_11",
+      "value": "1",
+      "href": "#",
+      "src": "img/single_page/layer-46.png",
+      "alt":"layer46.png",
+      "price": 52,
+      "name": "agnes top",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_12",
+      "value": "1",
+      "href": "#",
+      "src": "img/single_page/layer-47.png",
+      "alt":"layer47.png",
+      "price": 52,
+      "name": "sylva sweater",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_13",
+      "value": "1",
+      "href": "#",
+      "src": "img/product/content/layer-43.png",
+      "alt":"layer43.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_14",
+      "value": "1",
+      "href": "#",
+      "src": "img/product/content/layer-44.png",
+      "alt":"layer44.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_15",
+      "value": "1",
+      "href": "#",
+      "src": "img/product/content/layer-45.png",
+      "alt":"layer45.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_16",
+      "value": "1",
+      "href": "#",
+      "src": "img/product/content/layer-46.png",
+      "alt":"layer-46.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_17",
+      "value": "1",
+      "href": "#",
+      "src": "img/product/content/layer-49.png",
+      "alt":"layer-49.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    },
+    {
+      "id": "item_18",
+      "value": "1",
+      "href": "#",
+      "src": "img/product/content/layer-50.png",
+      "alt":"layer-50.png",
+      "price": 52,
+      "name": "Mango People T-Shirt",
+      "rating": "5.0"
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shopping cart</title>
+    <link rel="stylesheet" href="css/reboot.css">
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="content">
+        <header class="header">
+            <div class="container head_flex">
+                <div class="head_left">
+                    <a href="index.html" class="logo">
+                        <div class="brand">
+                            bran<span class="brand-d">d</span>
+                        </div>
+                    </a>
+                    <form class="header_middle">
+                        <div class="browse_menu_hidden">
+                            <div class="header_browse">
+                                Browse
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <div class="browse_menu">
+                                    <div class="transform"></div>
+                                    <p>women</p>
+                                    <div>
+                                        <a href="#">Dresses</a>
+                                        <a href="#">Tops</a>
+                                        <a href="#">Sweaters/Knits</a>
+                                        <a href="#">Jackets/Coats</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Denim</a>
+                                        <a href="#">Leggings/Pants</a>
+                                        <a href="#">Skirts/Shorts</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                    <p>men</p>
+                                    <div>
+                                        <a href="#">Tees/Tank tops</a>
+                                        <a href="#">Shirts/Polos</a>
+                                        <a href="#">Sweaters</a>
+                                        <a href="#">Sweatshirts/Hoodies</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Jackets/vests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="search" id="search" class="header_search" placeholder="Search for Item...">
+                        <div class="header_search_submit" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="head_right">
+                    <div id="basket">
+                        <div class="cart">
+                            <div class="items_number"><span id="item_number"></span></div>
+                        </div>
+                        <div class="cart-hide">
+                            <div class="load"></div>
+                            <div class="transform"></div>
+                            <div class="cart_price">
+                                <p>TOTAL</p>
+                                <p>$<span id="total_price"></span>.00</p></div>
+                            <a class="cart_checkout" href="/checkout/">Checkout</a>
+                            <a class="cart_to_cart" href="/cart/">Go to cart</a>
+                        </div>
+                    </div>
+                    <div id="autentification">
+                        <div class="my-Account"> My Account
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div id="autorize">
+                            <form class="authorization" method="post" action="/">
+                                <label for="login">Email adress: </label><input type="text" name="login"
+                                                                                id="login"/><br>
+                                <label for="password">Password: </label><input type="password" name="pass"
+                                                                               id="pass"/> <br>
+                                <div style="display: flex"><label for="rememberme">Remember me: </label>
+                                    <input type="checkbox" name="rememberme" id="rememberme"/></div>
+                                <br>
+                                <input class="button-enter" type="button" name="Submgin" value="LOG IN"
+                                       onclick="register()"/>
+                                <br>
+                                <!-- <a href="/register/">Register</a> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="container top_menu" id="top_menu">
+            <!-- загружено js -->
+        </nav>
+        <header class="header_arrivals">
+            <div class="container arrivals">
+                <h2>new arrivals</h2>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">men</a></li>
+                    <li><a class="header_menu_active" href="#">new arrivals</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div class="shopping_cart">
+                <!-- загружено js -->
+                <div class="shopping_cart_head">
+                    <div class="details details_head">product details</div>
+                    <div class="unit_price price_head">unit price</div>
+                    <div class="quantity quantity_head">quantity</div>
+                    <div class="shipping shipping_head">shipping</div>
+                    <div class="subtotal subtotal_head">subtotal</div>
+                    <div class="action_head">action</div>
+                </div>
+            </div>
+            <div class="shopping_cart_buttons">
+                <a class="clear-cart" href="#">CLEAR SHOPPING CART</a>
+                <a class="continue-cart" href="product.html">CONTINUE SHOPPING</a>
+            </div>
+            <div class="proceed-to-checkout">
+                <form class="shipping-adress">
+                    <h2>shipping adress</h2>
+                    <div class="country_adress"><p>Bangladesh</p>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div id="city_list" class="country_adress_hidden">
+                        <!--
+                        загружыено через ajax
+                        -->
+                    </div>
+                    <input type="text" placeholder="State" value required>
+                    <input type="text" placeholder="Postcode / Zip" value required>
+                    <button class="get-a-quote">get a quote</button>
+                </form>
+                <form class="coupon-discount">
+                    <h2>coupon discount</h2>
+                    <p>Enter your coupon code if you have one</p>
+                    <input type="text" placeholder="State" value required>
+                    <button class="apply-coupon">Apply coupon</button>
+                </form>
+                <form class="check-block">
+                    <div class="sub-total">Sub total <span> $900</span></div>
+                    <div class="grand-total">GRAND TOTAL <span> $900</span></div>
+                    <a href="checkout.html">proceed to checkout</a>
+                </form>
+            </div>
+        </div>
+        <div class="subscribe">
+            <div class="back_opacity">
+                <div class="sub container">
+                    <article class="sub_left">
+                        <div class="click_bar">
+                            <div class="click"></div>
+                            <div class="click act"></div>
+                            <div class="click"></div>
+                        </div>
+                    </article>
+                    <div class="sub_right">
+                        <div class="sub_right_h">Subscribe</div>
+                        <div class="sub_right_p"> FOR OUR NEWLETTER AND PROMOTION</div>
+                        <form class="sub_right_form">
+                            <input class="email-subscribe" id="email_subscribe" placeholder="Enter Your Email" required
+                                   pattern="\S+@[a-z]+.[a-z]+">
+                            <button class="email-subscribe-submit" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="company_information">
+                <article class="left_menu">
+                    <a href="index.html" class="logo">
+                        <h3 class="brand"> bran<span class="brand-d">d</span></h3>
+                    </a>
+                    <p class="left_menu_text">
+                        Objectively transition extensive data rather than cross functional
+                        solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits.
+                        Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                        <br>
+                        <br> Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
+                        superior initiatives for wireless technologies. Dynamically optimize.
+                    </p>
+                </article>
+                <nav class="right_menu">
+                    <ul>
+                        <li>company</li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">how it works</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <ul>
+                        <li>information</li>
+                        <li><a href="#">tearms &amp; condition</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">how to buy</a></li>
+                        <li><a href="#">how to sell</a></li>
+                        <li><a href="#">promotion</a></li>
+                    </ul>
+                    <ul>
+                        <li>shop category</li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">child</a></li>
+                        <li><a href="#">apparel</a></li>
+                        <li><a href="#">browse all</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div class="copyrights">&copy; 2017 Brand All Rights Reserved.</div>
+            <ul class="footer_icons">
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+                <li><i class="fa fa-pinterest-square" aria-hidden="true"></i></li>
+                <li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script>
+    $(document).ready(function () {
+        // basket
+        var basket = new Basket();
+       // basket.render('#basket');
+
+        $(document).on('click', '.cart', function () {
+            $('.cart-hide').slideToggle('slow');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#basket").length) {
+                $('.cart-hide').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+
+        $(document).on('click', '.header_browse', function () {
+            $('.browse_menu').slideToggle('slow');
+        });
+
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest(".browse_menu_hidden").length) {
+                $('.browse_menu').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+        $('.load').on('click', '.fa', function () {
+            var eventId = $(this).parents('.cart-hide_item')[0].id;
+            var cartId = eventId.split('_')[0] + '_shopping';
+            basket.delete(eventId);
+            shoppingCart.delete(cartId);
+        });
+
+
+        $('#featured_parent').on('click', '.fetured_item', function (e) {
+            this.idProduct = $(this).attr('id').split('_')[1];
+            this.src = $(this).find('.item_img').attr('src');
+            this.alt = $(this).find('.item_img').attr('alt');
+            this.quantity = $(this).attr('value');
+            this.price = $(this).find('.fetured_price').text().replace('$', '');
+            this.name = $(this).find('.fetured_text').text();
+            this.rating = $(this).find('.stars_fetured').html();
+            basket.add(this.idProduct, this.src, this.alt, this.quantity, this.price, this.name, this.rating);
+        });
+
+        //menu get & render
+        $.ajax({
+            method: "GET",
+            url: './ajax/menu.json',
+            dataType: "json",
+            success: function (data) {
+                var menuitems = [];
+                for (var i = 0; i < data.length; i++) {
+                    menuitems.push(new MenuItem(data[i].href, data[i].name, data[i].submenu));
+                }
+                document.getElementById('top_menu').innerHTML = (new Menu('my_menu', 'menu', menuitems).render());
+            }
+        });
+
+        // forms
+        var regExpMail = /^\w+\.?-?\w+@\w+\.\w+$/g;
+        $('.email-subscribe-submit').on('click', function () {
+            var emailInput = $('#email_subscribe');
+            checkForm(emailInput, regExpMail);
+            return false;
+        });
+
+        // citaty
+        $('.click_bar').on('click', '.click', function () {
+            $(this).siblings().removeClass('act');
+            $(this).addClass('act');
+            var act = $(this).index();
+            $('.citaty').remove();
+            $.ajax({
+                method: "GET",
+                url: './ajax/citatys.json',
+                dataType: "json",
+                success: function (data) {
+                    new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                        data.citatys[act].signature).render('.sub_left');
+                }
+            });
+        });
+
+        var act = $('.act').index();
+        $.ajax({
+            method: "GET",
+            url: './ajax/citatys.json',
+            dataType: "json",
+            success: function (data) {
+                new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                    data.citatys[act].signature).render('.sub_left');
+            }
+        });
+
+        // shopping_cart
+        var shoppingCart = new ShoppingCart('.shopping_cart');
+       // shoppingCart.render('.shopping_cart');
+
+       $('.load').load('.cart-hide_item', function () {
+           var basketStatus = $('.cart-hide_item');
+            console.log(basketStatus);
+            for (i = 0; i < basketStatus.length; i++) {
+                shoppingCart.add(basketStatus[i]);
+            }
+        });
+
+        $('.shopping_cart').on('click', '.fa-times-circle', function () {
+            var idItem = $(this).parents('.shopping_cart_item').attr('id');
+            var Id = $(this).parents('.shopping_cart_item').attr('id').split('_')[0];
+            var idBasket = Id + '_cart';
+            shoppingCart.delete(idItem);
+            basket.delete(idBasket);
+        });
+
+        $('.clear-cart').on('click', function () {
+            $('.shopping_cart_item').remove();
+            var elemsBasket = $('.load').children();
+            for (var i = 0; i < elemsBasket.length; i++) {
+                basket.delete(elemsBasket[i].id);
+            }
+            return false;
+        });
+
+        // forms
+        var inputCity = $('.country_adress').find('p').html();
+        $('.country_adress').on('click', function () {
+            $('.country_adress_hidden').slideToggle('slow');
+            $(this).find('.fa').toggleClass('angle-switch180');
+        });
+
+        $('.country_adress_hidden').on('click', 'div', function () {
+            $('.country_adress_hidden').slideUp('slow');
+            $(this).parent().prev().find('.fa').toggleClass('angle-switch180');
+            var valCity = $(this).html();
+            $('.country_adress').find('p').html(valCity);
+        });
+
+
+        $.ajax({
+            method: "GET",
+            url: './ajax/cityList.json',
+            dataType: "json",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    new CityList(data[i].id, data[i].name).render('#city_list');
+                }
+            }
+        });
+
+        $('.get-a-quote').on('click', function () {
+            var regExpPostCode = /^\d{6}$/i;
+            var regExpState = /[a-z]/ig;
+            var inputPostCode = $(this).prev();
+            var inputState = $(inputPostCode).prev();
+            checkForm(inputState, regExpState);
+            checkForm(inputPostCode, regExpPostCode);
+        });
+
+        $('.apply-coupon').on('click', function () {
+            var regExpCode = /^\d{8}$/i;
+            var inputCode = $(this).prev();
+            checkForm(inputCode, regExpCode);
+        });
+
+        // authorization
+        $('.authorization').hide();
+        $(document).on('click', '.my-Account', function () {
+            $('.authorization').slideToggle('slow');
+            $(this).find('.fa').toggleClass('rotate180deg');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#autentification").length) {
+                $('.authorization').slideUp('slow');
+                $('.my-Account').find('.fa').removeClass('rotate180deg');
+            }
+            e.stopPropagation();
+        });
+
+    });
+</script>
+</body>
+</html>

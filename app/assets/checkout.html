@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>checkout</title>
+    <link rel="stylesheet" href="css/reboot.css">
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="content">
+        <header class="header">
+            <div class="container head_flex">
+                <div class="head_left">
+                    <a href="index.html" class="logo">
+                        <div class="brand">
+                            bran<span class="brand-d">d</span>
+                        </div>
+                    </a>
+                    <form class="header_middle">
+                        <div class="browse_menu_hidden">
+                            <div class="header_browse">
+                                Browse
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <div class="browse_menu">
+                                    <div class="transform"></div>
+                                    <p>women</p>
+                                    <div><a href="#">Dresses</a>
+                                        <a href="#">Tops</a>
+                                        <a href="#">Sweaters/Knits</a>
+                                        <a href="#">Jackets/Coats</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Denim</a>
+                                        <a href="#">Leggings/Pants</a>
+                                        <a href="#">Skirts/Shorts</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                    <p>men</p>
+                                    <div>
+                                        <a href="#">Tees/Tank tops</a>
+                                        <a href="#">Shirts/Polos</a>
+                                        <a href="#">Sweaters</a>
+                                        <a href="#">Sweatshirts/Hoodies</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Jackets/vests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="search" id="search" class="header_search" placeholder="Search for Item...">
+                        <div class="header_search_submit" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="head_right">
+                    <div id="basket"></div>
+                    <div id="autentification">
+                        <div class="my-Account"> My Account
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div id="autorize">
+                            <form class="authorization" method="post" action="/">
+                                <label for="login">Email adress: </label><input type="text" name="login"
+                                                                                id="login"/><br>
+                                <label for="password">Password: </label><input type="password" name="pass"
+                                                                               id="pass"/> <br>
+                                <div style="display: flex"><label for="rememberme">Remember me: </label>
+                                    <input type="checkbox" name="rememberme" id="rememberme"/></div>
+                                <br>
+                                <input class="button-enter" type="button" name="Submgin" value="LOG IN"
+                                       onclick="register()"/>
+                                <br>
+                                <!-- <a href="/register/">Register</a> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="container top_menu" id="top_menu">
+            <!-- загружено js -->
+        </nav>
+        <header class="header_arrivals">
+            <div class="container arrivals">
+                <h2>new arrivals</h2>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">men</a></li>
+                    <li><a class="header_menu_active" href="#">new arrivals</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div class="checkout">
+                <div class="checkout-item">
+                    <h2>01.&nbsp;&nbsp;&nbsp;shipping adress</h2>
+                    <div class="details_in">
+                        <form class="details_left">
+                            <div>
+                                <div class="sa-row1">check as a guest or register</div>
+                                <div class="sa-row2">Register with us for future convenience</div>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" id="hd-1" class="hide" name="check">
+                                <label class="sup" for="hd-1">
+                                    <div class="adv">
+                                        <div class="bbb"></div>
+                                    </div>
+                                    <p>Checkout as guest</p>
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" id="hd-2" class="hide" name="check" value checked>
+                                <label class="sup" for="hd-2">
+                                    <div class="adv">
+                                        <div class="bbb"></div>
+                                    </div>
+                                    <p>register</p>
+                                </label>
+                            </div>
+                            <div class="sa-block2">
+                                <div class="sa-row1">register and save time!</div>
+                                <div class="sa-row2 sa-row2__2">Register with us for future convenience</div>
+                            </div>
+                            <div>
+                                <a href="#" class="sa-row3">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    Fastand easy checkout
+                                </a>
+                                <a href="#" class="sa-row3 sa-row3__2">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    Easy access to your order history and status
+                                </a>
+                            </div>
+                            <button class="sa-button sa-continue">Continue</button>
+                        </form>
+                        <form class="details_right">
+                            <div>
+                                <div class="sa-row1">Already registed?</div>
+                                <div class="sa-row2">Please log in below</div>
+                            </div>
+                            <label class="sa-email" for="email">email address
+                                <span></span>
+                            </label>
+                            <input id="email" type="email" name="myEmailField">
+                            <label class="sa-email" for="password">password
+                                <span></span>
+                            </label>
+                            <input id="password" type="password" name="Password">
+                            <div class="sa_attention1"></div>
+                            <div>
+                                <button class="sa-button sa-login">log in</button>
+                                <a class="remind_pass" href="#">forgot password?</a></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="checkout-item">
+                    <h2>02.&nbsp;&nbsp;&nbsp;billing information</h2>
+                    <div class="details_in"></div>
+                </div>
+                <div class="checkout-item">
+                    <h2>03.&nbsp;&nbsp;&nbsp;shipping information</h2>
+                    <div class="details_in"></div>
+                </div>
+                <div class="checkout-item">
+                    <h2>04.&nbsp;&nbsp;&nbsp;shipping method</h2>
+                    <div class="details_in"></div>
+                </div>
+                <div class="checkout-item">
+                    <h2>05.&nbsp;&nbsp;&nbsp;payment method</h2>
+                    <div class="details_in"></div>
+                </div>
+                <div class="checkout-item">
+                    <h2>06.&nbsp;&nbsp;&nbsp;order review</h2>
+                    <div class="details_in"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe">
+            <div class="back_opacity">
+                <div class="sub container">
+                    <article class="sub_left">
+
+                        <div class="click_bar">
+                            <div class="click"></div>
+                            <div class="click act"></div>
+                            <div class="click"></div>
+                        </div>
+                    </article>
+                    <div class="sub_right">
+                        <div class="sub_right_h">Subscribe</div>
+                        <div class="sub_right_p"> FOR OUR NEWLETTER AND PROMOTION</div>
+                        <form class="sub_right_form">
+                            <input class="email-subscribe" id="email_subscribe" placeholder="Enter Your Email" required
+                                   pattern="\S+@[a-z]+.[a-z]+">
+                            <button class="email-subscribe-submit" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="company_information">
+                <article class="left_menu">
+                    <a href="index.html" class="logo">
+                        <h3 class="brand"> bran<span class="brand-d">d</span></h3>
+                    </a>
+                    <p class="left_menu_text"> Objectively transition extensive data rather than cross functional
+                        solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits.
+                        Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                        <br>
+                        <br> Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
+                        superior initiatives for wireless technologies. Dynamically optimize.
+                    </p>
+                </article>
+                <nav class="right_menu">
+                    <ul>
+                        <li>company</li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">how it works</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <ul>
+                        <li>information</li>
+                        <li><a href="#">tearms &amp; condition</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">how to buy</a></li>
+                        <li><a href="#">how to sell</a></li>
+                        <li><a href="#">promotion</a></li>
+                    </ul>
+                    <ul>
+                        <li>shop category</li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">child</a></li>
+                        <li><a href="#">apparel</a></li>
+                        <li><a href="#">browse all</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div class="copyrights">&copy; 2017 Brand All Rights Reserved.</div>
+            <ul class="footer_icons">
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+                <li><i class="fa fa-pinterest-square" aria-hidden="true"></i></li>
+                <li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.details_in').css("display", "none");
+        $('.checkout-item h2').click(function () {
+
+            var box = $(this).parent();
+            var contentOne = $('.details_in', box);
+            var contents = $('.details_in');
+
+            if (!contentOne.is(':visible')) {
+                contents.slideUp('slow');
+            }
+            contentOne.slideToggle('slow');
+        })
+
+        // checkout forms
+        var regExpMail = /^\w+\.?-?\w+@\w+\.\w+$/g;
+        $('.sa-login').on('click', function () {
+            var emailLogin = $('#email');
+            var passwordLogin = $('#password');
+
+            if (!regExpMail.test(emailLogin.val())) {
+                $('.sa-email').children().addClass('sa_attention');
+                passwordLogin.next().text('* Required Fileds');
+                return false;
+            } else if (!passwordLogin.val()) {
+                $('.sa-email').children().addClass('sa_attention');
+                passwordLogin.next().text('* Required Fileds');
+                return false;
+            } else {
+                $('.sa-email').children().removeClass('sa_attention');
+                passwordLogin.next().text('');
+                console.log(regExpMail.test(emailLogin.val()));
+                return false;
+            }
+        });
+
+        // basket
+        var basket = new Basket();
+        basket.render('#basket');
+
+
+        $(document).on('click', '.cart', function () {
+            $('.cart-hide').slideToggle('slow');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#basket").length) {
+                $('.cart-hide').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+
+        $(document).on('click', '.header_browse', function () {
+            $('.browse_menu').slideToggle('slow');
+        });
+
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest(".browse_menu_hidden").length) {
+                $('.browse_menu').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+        $('.load').on('click', '.fa', function () {
+            var eventId = $(this).parents('.cart-hide_item')[0].id;
+            basket.delete(eventId);
+        });
+
+
+        $('#featured_parent').on('click', '.fetured_item', function (e) {
+            this.idProduct = $(this).attr('id').split('_')[1];
+            this.src = $(this).find('.item_img').attr('src');
+            this.alt = $(this).find('.item_img').attr('alt');
+            this.quantity = $(this).attr('value');
+            this.price = $(this).find('.fetured_price').text().replace('$', '');
+            this.name = $(this).find('.fetured_text').text();
+            this.rating = $(this).find('.stars_fetured').html();
+            basket.add(this.idProduct, this.src, this.alt, this.quantity, this.price, this.name, this.rating);
+        });
+
+
+        //menu get & render
+        $.ajax({
+            method: "GET",
+            url: './ajax/menu.json',
+            dataType: "json",
+            success: function (data) {
+                var menuitems = [];
+                for (var i = 0; i < data.length; i++) {
+                    menuitems.push(new MenuItem(data[i].href, data[i].name, data[i].submenu));
+                }
+                document.getElementById('top_menu').innerHTML = (new Menu('my_menu', 'menu', menuitems).render());
+            }
+        });
+
+        // forms
+
+        $('.email-subscribe-submit').on('click', function () {
+            var emailInput = $('#email_subscribe');
+            checkForm(emailInput, regExpMail);
+            return false;
+        });
+
+        // citaty
+        $('.click_bar').on('click', '.click', function () {
+            $(this).siblings().removeClass('act');
+            $(this).addClass('act');
+            var act = $(this).index();
+            $('.citaty').remove();
+            $.ajax({
+                method: "GET",
+                url: './ajax/citatys.json',
+                dataType: "json",
+                success: function (data) {
+                    new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                        data.citatys[act].signature).render('.sub_left');
+                }
+            });
+        });
+
+        var act = $('.act').index();
+
+        $.ajax({
+            method: "GET",
+            url: './ajax/citatys.json',
+            dataType: "json",
+            success: function (data) {
+                new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                    data.citatys[act].signature).render('.sub_left');
+            }
+        });
+
+        // authorization
+        $('.authorization').hide();
+        $(document).on('click', '.my-Account', function () {
+            $('.authorization').slideToggle('slow');
+            $(this).find('.fa').toggleClass('rotate180deg');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#autentification").length) {
+                $('.authorization').slideUp('slow');
+                $('.my-Account').find('.fa').removeClass('rotate180deg');
+            }
+            e.stopPropagation();
+        });
+    });
+</script>
+</body>
+</html>

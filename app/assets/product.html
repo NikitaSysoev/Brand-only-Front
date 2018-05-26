@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>product</title>
+    <link rel="stylesheet" href="css/reboot.css">
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="content">
+        <header class="header">
+            <div class="container head_flex">
+                <div class="head_left">
+                    <a href="index.html" class="logo">
+                        <div class="brand">
+                            bran<span class="brand-d">d</span>
+                        </div>
+                    </a>
+                    <form class="header_middle">
+                        <div class="browse_menu_hidden">
+                            <div class="header_browse">
+                                Browse <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <div class="browse_menu">
+                                    <div class="transform"></div>
+                                    <p>women</p>
+                                    <div>
+                                        <a href="#">Dresses</a>
+                                        <a href="#">Tops</a> <a href="#">Sweaters/Knits</a>
+                                        <a href="#">Jackets/Coats</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Denim</a>
+                                        <a href="#">Leggings/Pants</a>
+                                        <a href="#">Skirts/Shorts</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                    <p>men</p>
+                                    <div>
+                                        <a href="#">Tees/Tank tops</a>
+                                        <a href="#">Shirts/Polos</a>
+                                        <a href="#">Sweaters</a>
+                                        <a href="#">Sweatshirts/Hoodies</a>
+                                        <a href="#">Blazers</a>
+                                        <a href="#">Jackets/vests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="search" id="search" class="header_search" placeholder="Search for Item...">
+                        <div class="header_search_submit" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="head_right">
+                    <div id="basket"></div>
+                    <div id="autentification">
+                        <div class="my-Account"> My Account
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div id="autorize">
+                            <form class="authorization" method="post" action="/">
+                                <label for="login">Email adress: </label><input type="text" name="login"
+                                                                                id="login"/><br>
+                                <label for="password">Password: </label><input type="password" name="pass"
+                                                                               id="pass"/> <br>
+                                <div style="display: flex"><label for="rememberme">Remember me: </label>
+                                    <input type="checkbox" name="rememberme" id="rememberme"/></div>
+                                <br>
+                                <input class="button-enter" type="button" name="Submgin" value="LOG IN"
+                                       onclick="register()"/>
+                                <br>
+                                <!-- <a href="/register/">Register</a> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="container top_menu" id="top_menu">
+            <!-- загружено js -->
+        </nav>
+        <header class="header_arrivals">
+            <div class="container arrivals">
+                <h2>new arrivals</h2>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">men</a></li>
+                    <li><a class="header_menu_active" href="#">new arrivals</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div class="man_content">
+                <nav class="products_left_menu">
+                    <details>
+                        <summary>Category</summary>
+                        <ul>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bags</a></li>
+                            <li><a href="#">Denim</a></li>
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                            <li><a href="#">Pants</a></li>
+                            <li><a href="#">Polos</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Sweaters & Knits</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tanks</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Brand</summary>
+                    </details>
+                    <details>
+                        <summary>designer</summary>
+                    </details>
+                </nav>
+                <div class="products">
+                    <div class="product_options">
+                        <fieldset class="option_left">
+                            <legend>trending now</legend>
+                            <ul class="option_left_nav">
+                                <li><a href="#">bohemian</a></li>
+                                <li><a class="option_a" href="#">floral</a></li>
+                                <li><a href="#">lace</a></li>
+                            </ul>
+                            <ul class="option_left_nav1">
+                                <li><a href="#">floral</a></li>
+                                <li><a class="option_a" href="#">lace</a></li>
+                                <li><a href="#">bohemian</a></li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="option_middle">
+                            <legend>size</legend>
+                            <form class="option_middle_nav">
+                                <input id="XXS" type="checkbox" name="check" value="XXS">
+                                <label for="XXS">XXS</label>
+                                <input id="XS" type="checkbox" name="check" value="XX">
+                                <label for="XS">XS</label>
+                                <input id="S" type="checkbox" name="check" value="S">
+                                <label for="S">S</label>
+                                <input id="M" type="checkbox" name="check" value="M">
+                                <label for="M">M </label>
+                            </form>
+                            <form class="option_middle_nav1">
+                                <input id="L" type="checkbox" name="check" value="L">
+                                <label class="nav1_a" for="L">L</label>
+                                <input id="XL" type="checkbox" name="check" value="XL">
+                                <label class="nav1_b" for="XL">XL</label>
+                                <input id="XXL" type="checkbox" name="check" value="XXL">
+                                <label class="XXL" for="XXL">XXL</label>
+                            </form>
+                        </fieldset>
+                        <div class="option_right">
+                            <p>price</p>
+                            <div class="slider-price"></div>
+                            <div class="range-price">
+                                <p>$<span id="left_count">52</span></p>
+                                <p>$<span id="right_count">400</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_toolbar">
+                        <form class="sort_by">
+                            <button class="butt_a">Sort By</button>
+                            <button class="butt_b">name</button>
+                            <div class="clearfix"></div>
+                        </form>
+                        <form class="show_by">
+                            <button class="butt_a">Show</button>
+                            <button class="butt_b">09</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                    <div class="product_img">
+                        <div class="fetured_parent" id="featured_parent">
+
+                        </div>
+                    </div>
+                    <div class="product_buttons">
+                        <div class="paginator"> <span class="paginator_pages">
+                                <a href="#">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                </a>
+                                <a class="ppage_fix ppage_active" href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a class="ppage_prelast" href="#">6</a>
+                                <span class="paginator_ellipsis">.....</span>
+                            <a class="ppage_last" href="#">20</a>
+                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a> </span>
+                        </div>
+                        <a class="view_all">view all</a></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer_arrivals">
+            <div class="container dignity">
+                <div class="dignity_block">
+                    <div class="img1"></div>
+                    <a href="#">Free Delivery</a>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </div>
+                <div class="dignity_block">
+                    <div class="img2"></div>
+                    <a class="dig_a" href="#">Sales & discounts</a>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </div>
+                <div class="dignity_block">
+                    <div class="img3"></div>
+                    <a href="#">Quality assurance</a>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </div>
+            </div>
+        </footer>
+        <div class="subscribe">
+            <div class="back_opacity">
+                <div class="sub container">
+                    <article class="sub_left">
+
+                        <div class="click_bar">
+                            <div class="click"></div>
+                            <div class="click act"></div>
+                            <div class="click"></div>
+                        </div>
+                    </article>
+                    <div class="sub_right">
+                        <div class="sub_right_h">Subscribe</div>
+                        <div class="sub_right_p"> FOR OUR NEWLETTER AND PROMOTION</div>
+                        <form class="sub_right_form">
+                            <input class="email-subscribe" id="email_subscribe" placeholder="Enter Your Email" required
+                                   pattern="\S+@[a-z]+.[a-z]+">
+                            <button class="email-subscribe-submit" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="company_information">
+                <article class="left_menu">
+                    <a href="index.html" class="logo">
+                        <h3 class="brand"> bran<span class="brand-d">d</span></h3></a>
+                    <p class="left_menu_text"> Objectively transition extensive data rather than cross functional
+                        solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits.
+                        Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                        <br>
+                        <br> Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
+                        superior initiatives for wireless technologies. Dynamically optimize. </p>
+                </article>
+                <nav class="right_menu">
+                    <ul>
+                        <li>company</li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">how it works</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <ul>
+                        <li>information</li>
+                        <li><a href="#">tearms &amp; condition</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">how to buy</a></li>
+                        <li><a href="#">how to sell</a></li>
+                        <li><a href="#">promotion</a></li>
+                    </ul>
+                    <ul>
+                        <li>shop category</li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">child</a></li>
+                        <li><a href="#">apparel</a></li>
+                        <li><a href="#">browse all</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div class="copyrights">&copy; 2017 Brand All Rights Reserved.</div>
+            <ul class="footer_icons">
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+                <li><i class="fa fa-pinterest-square" aria-hidden="true"></i></li>
+                <li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script>
+    $(document).ready(function () {
+        // slider
+        $(".slider-price").slider({
+            animate: true, // Анимация. true - включить. false - выключить.
+            min: 1, // Минимальный интервал диапазона.
+            max: 500, // Максимальный интервал диапазона.
+            range: true, // Включение двойного ползунка. Если место true поставить 'min', то будет один ползунок.
+            step: 1, // Шаг ползунка.
+            values: [52, 400], // Значения для ползунков. Для первого и второго.
+            slide: function (event, ui) { // Действия которые будут происходить по перетаскивания ползунка.
+                $("#left_count").html(ui.values[0]); // Значение первого ползунка.
+                $("#right_count").html(ui.values[1]); // Значение второго ползунка.
+            }
+
+        });
+        $("span.ui-state-default.ui-corner-all").css('width', '14px');
+        $("span.ui-state-default.ui-corner-all").css('height', '14px');
+        $("span.ui-state-default.ui-corner-all").css('border-radius', '50%');
+        $("span.ui-state-default.ui-corner-all").css('background', '#f16d7f');
+        $("span.ui-state-default.ui-corner-all").css('border', '1px solid #f16d7f');
+        $("span.ui-state-default.ui-corner-all").css('cursor', 'pointer');
+        $(".ui-widget-content.ui-widget").css('border', '1px solid #f0f0f0');
+        $(".ui-widget-header.ui-corner-all").css('background', '#f16d7f');
+        $(".ui-widget-content.ui-corner-all").css('background', '#f0f0f0');
+        $(".ui-widget-content.ui-corner-all").css('height', '6px');
+
+
+        // product-products
+        var featItems = document.getElementsByClassName('fetured_item');
+        $.ajax({
+            method: "GET",
+            url: './ajax/shopItemsProduct.json',
+            dataType: "json",
+            success: function (data) {
+                for (var index in data.shopItems) {
+                    new ShopItem(data.shopItems[index].id, data.shopItems[index].value, data.shopItems[index].href,
+                        data.shopItems[index].src, data.shopItems[index].alt, data.shopItems[index].price,
+                        data.shopItems[index].name, data.shopItems[index].rating).render('.fetured_parent');
+                }
+                for (var i = showByNumber; i < featItems.length; i++) {
+                    featItems[i].style.display = "none";
+                }
+            }
+        });
+
+        var showByNumber = parseInt($('.show_by').find('.butt_b').text());
+
+
+        $('.view_all').on('click', function () {
+            for (var i = 8; i < featItems.length; i++) {
+                featItems[i].style.display = "block";
+            }
+            $(this).css('display', 'none');
+            $('.paginator').css('display', 'none');
+        });
+
+        // basket
+        var basket = new Basket();
+        basket.render('#basket');
+
+        $(document).on('click', '.cart', function () {
+            $('.cart-hide').slideToggle('slow');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#basket").length) {
+                $('.cart-hide').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+
+        $(document).on('click', '.header_browse', function () {
+            $('.browse_menu').slideToggle('slow');
+        });
+
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest(".browse_menu_hidden").length) {
+                $('.browse_menu').slideUp('slow');
+            }
+            e.stopPropagation();
+        });
+
+        $('.load').on('click', '.fa', function () {
+            var eventId = $(this).parents('.cart-hide_item')[0].id;
+            basket.delete(eventId);
+        });
+
+
+        $('#featured_parent').on('click', '.fetured_item', function (e) {
+            this.idProduct = $(this).attr('id').split('_')[1];
+            this.src = $(this).find('.item_img').attr('src');
+            this.alt = $(this).find('.item_img').attr('alt');
+            this.quantity = $(this).attr('value');
+            this.price = $(this).find('.fetured_price').text().replace('$', '');
+            this.name = $(this).find('.fetured_text').text();
+            this.rating = $(this).find('.stars_fetured').html();
+            basket.add(this.idProduct, this.src, this.alt, this.quantity, this.price, this.name, this.rating);
+        });
+
+
+        //menu get & render
+        $.ajax({
+            method: "GET",
+            url: './ajax/menu.json',
+            dataType: "json",
+            success: function (data) {
+                var menuitems = [];
+                for (var i = 0; i < data.length; i++) {
+                    menuitems.push(new MenuItem(data[i].href, data[i].name, data[i].submenu));
+                }
+                document.getElementById('top_menu').innerHTML = (new Menu('my_menu', 'menu', menuitems).render());
+            }
+        });
+
+        // forms
+        var regExpMail = /^\w+\.?-?\w+@\w+\.\w+$/g;
+        $('.email-subscribe-submit').on('click', function () {
+            var emailInput = $('#email_subscribe');
+            checkForm(emailInput, regExpMail);
+            return false;
+        });
+
+        // citaty
+        $('.click_bar').on('click', '.click', function () {
+            $(this).siblings().removeClass('act');
+            $(this).addClass('act');
+            var act = $(this).index();
+            $('.citaty').remove();
+            $.ajax({
+                method: "GET",
+                url: './ajax/citatys.json',
+                dataType: "json",
+                success: function (data) {
+                    new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                        data.citatys[act].signature).render('.sub_left');
+                }
+            });
+        });
+
+        var act = $('.act').index();
+        $.ajax({
+            method: "GET",
+            url: './ajax/citatys.json',
+            dataType: "json",
+            success: function (data) {
+                new Citaty(data.citatys[act].url, data.citatys[act].text, data.citatys[act].author,
+                    data.citatys[act].signature).render('.sub_left');
+            }
+        });
+
+        // authorization
+        $('.authorization').hide();
+        $(document).on('click', '.my-Account', function () {
+            $('.authorization').slideToggle('slow');
+            $(this).find('.fa').toggleClass('rotate180deg');
+        });
+        $(document).mouseup(function (e) {
+            if (!$(e.target).closest("#autentification").length) {
+                $('.authorization').slideUp('slow');
+                $('.my-Account').find('.fa').removeClass('rotate180deg');
+            }
+            e.stopPropagation();
+        });
+    });
+</script>
+</body>
+</html>
